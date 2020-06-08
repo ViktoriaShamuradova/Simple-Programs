@@ -6,7 +6,7 @@ public class Util {
 
     public static BigInteger calculateValue(int number) {
 
-        int[] array = BuilderArray.buildArrayFrom1ToNumber(number);
+        int[] array = BuilderArray.buildArrayOneToNumber(number);
         BigInteger mul = BigInteger.valueOf(1);
             for (int i = 0; i < array.length; i++) {
                 int sum = 0;

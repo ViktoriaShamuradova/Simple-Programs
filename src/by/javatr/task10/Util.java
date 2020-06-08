@@ -7,9 +7,11 @@ public class Util {
     public static boolean sequenceIsIncreasing() {
         return identifySeq(true, false, false);
     }
+
     public static boolean isHaveOnePairOrMoreEqualsNumbers() {
         return identifySeq(false, true, false);
     }
+
     public static boolean isTheSequenceAlternating() {
         return identifySeq(false, false, true);
     }
@@ -19,7 +21,7 @@ public class Util {
         int previous = 0;
         while (true) {
             int number = DataScanner.enterIntegerFromConsole();
-            if (ValidNumber.isValidNum(number)) {
+            if (Validation.isValid(number)) {
                 if (number == 0) {
                     break;
                 }
@@ -49,11 +51,7 @@ public class Util {
                 return false;
             }
         }
-        if (isIncreasing || isAlternating) {
-            return true;
-        } else {
-            return false;
-        }
+        return isIncreasing || isAlternating;
     }
 }
 

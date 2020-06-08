@@ -2,7 +2,7 @@ package by.javatr.task7;
 
 public class Util {
 
-    public static double swapTheFractionalAndIntegerPartsOfTheNumber(double number) {
+    public static double swapFractionalAndIntegerParts(double number) {
         int whole = swapFractionPart(number);
         double fraction = swapIntegerPart(number);
         return whole + fraction;
