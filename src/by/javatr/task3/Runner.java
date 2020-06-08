@@ -7,7 +7,7 @@ public class Runner {
         double[] array = new double[]{5, 4, 3};
         double[] array2 = new double[]{5, 6, -3};
 
-        System.out.println(Arrays.toString(Util.doubleOrReplaceWithAbsoluteValues(array)));
-        System.out.println(Arrays.toString(Util.doubleOrReplaceWithAbsoluteValues(array2)));
+        System.out.println(Arrays.toString(Util.doubleOrAbsoluteValues(array)));
+        System.out.println(Arrays.toString(Util.doubleOrAbsoluteValues(array2)));
     }
 }
