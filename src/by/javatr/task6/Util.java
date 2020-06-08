@@ -1,56 +1,32 @@
 package by.javatr.task6;
 
-import java.math.BigInteger;
-
 public class Util {
-    private final static int INT_BIT_COUNT = 32;
-    private final static int LONG_BIT_COUNT = 64;
+    private static final double MAX_LIMIT_INT = Integer.MAX_VALUE;
+    private static final double MIN_LIMIT_INT = Integer.MIN_VALUE;
+    private static final double MAX_LIMIT_LONG = Long.MAX_VALUE;
+    private static final double MIN_LIMIT_LONG = Long.MIN_VALUE;
 
-    public static void findWhenOverInt(long first, long step) {
-        findWhenOver(first, step, true);
+    public static int findWhenOverInt(int a1, int d) {
+        return findWhenOver(a1, d, MAX_LIMIT_INT, MIN_LIMIT_INT);
     }
 
-    public static void findWhenOverLong(long first, long step) {
-        findWhenOver(first, step, false);
+    public static int findWhenOverLong(int a1, int d) {
+        return findWhenOver(a1, d, MAX_LIMIT_LONG, MIN_LIMIT_LONG);
     }
 
-    private static void findWhenOver(long first, long step, boolean forInt) {
-        long numberOrder = 1;
-        long number = first;
-        while (true) {
-            numberOrder++;
-            number = number + step;
+    public static int findWhenOver(int a1, int d, double limitMax, double limitMin) {
+        int counter = 1;
+        double an = a1;
+        double sumOfArithmeticProgression = 0;
 
-            // Sn = ( a1 + an )* n / 2
-            BigInteger sN = calculateSum(first, number, numberOrder);
-
-            System.out.println("IT: " + numberOrder + " number: " + sN.toString());
-            if (forInt && overflowInt(sN)) {
-                System.out.printf("Number %s overflows int. \nThe order is %d", sN.toString(), numberOrder);
-                return;
-            }
-            if (!forInt && overflowLong(sN)) {
-                System.out.printf("Number %s overflows long. \nThe order is %d", sN.toString(), numberOrder);
-                return;
-            }
+        while (sumOfArithmeticProgression < limitMax && sumOfArithmeticProgression > limitMin) {
+            an = an + d;
+            counter++;
+            sumOfArithmeticProgression = (a1 + an) * (counter / 2);
         }
+
+        return counter;
     }
 
-    private static BigInteger calculateSum(long first, long last, long numberOrder) {
-        BigInteger firstBI = new BigInteger(String.valueOf(first));
-        BigInteger lastBI = new BigInteger(String.valueOf(last));
-        BigInteger numberOrderBI = new BigInteger(String.valueOf(numberOrder));
-
-        // (firstBi + lastBI) * numberOrderBI / 2
-        return firstBI.add(lastBI).multiply(numberOrderBI).divide(new BigInteger("2"));
-    }
-
-    private static boolean overflowInt(BigInteger value) {
-        return value.bitLength() >= INT_BIT_COUNT;
-    }
-
-    private static boolean overflowLong(final BigInteger value) {
-        return value.bitLength() >= LONG_BIT_COUNT;
-    }
 
 }
