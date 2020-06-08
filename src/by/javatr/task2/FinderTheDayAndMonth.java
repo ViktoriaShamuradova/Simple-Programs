@@ -1,8 +1,9 @@
 package by.javatr.task2;
 
 public class FinderTheDayAndMonth {
-    private static final int countOfMonths = 12;
-    private static final int numberOfDaysInFebruary = 28;
+    private static final int COUNT_OF_MONTH = 12;
+    private static final int NUMBER_OF_DAY_IN_FEBRUARY = 28;
+
 
 
     public static void main(String[] args) {
@@ -18,9 +19,9 @@ public class FinderTheDayAndMonth {
             int daysInMonth;
             int day = 0;
             int numberOfMonth = 1;
-            for (; numberOfMonth <= countOfMonths; numberOfMonth++) {
+            for (; numberOfMonth <= COUNT_OF_MONTH; numberOfMonth++) {
                 if (numberOfMonth == 2) {
-                    daysInMonth = numberOfDaysInFebruary;
+                    daysInMonth = NUMBER_OF_DAY_IN_FEBRUARY;
                 } else {
                     boolean beforeAugust = numberOfMonth < 8;
                     boolean afterJuly = !beforeAugust;

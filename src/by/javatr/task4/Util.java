@@ -2,7 +2,7 @@ package by.javatr.task4;
 
 public class Util {
 
-    public static double calcFunction (double x) {
+    public static double calcFunction(double x) {
         if (x <= 13) {
             return -Math.pow(x, 3) + 9;
         } else {
