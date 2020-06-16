@@ -74,24 +74,25 @@ public class Util {
         double[][] matrix = new double[array.length][array.length];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
-                matrix[i][j] = Math.pow(array[j], i+1);
+                matrix[i][j] = Math.pow(array[j], i + 1);
             }
         }
         return matrix;
+
     }
 
     public static void main(String[] args) {
         int[][] matrix = new int[][]{{1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}};
         int[][] newMatrix = Util.formMatrix1(matrix);
         int[][] newMatrix2 = Util.formMatrix2(matrix);
-       // int[][] newMatrix3 = Util.formMatrix3(matrix);
+        int[][] newMatrix3 = Util.formMatrix3(matrix);
         PrinterMatrix.arrayPrint(newMatrix);
         PrinterMatrix.arrayPrint(newMatrix2);
-       // PrinterMatrix.arrayPrint(newMatrix3);
+         PrinterMatrix.arrayPrint(newMatrix3);
 
-        double[] array = new double[]{1,2,3,4};
-        double[][] newMatrix4 = Util.formMatrix4(array);
-        PrinterMatrix.arrayPrint(newMatrix4);
+
+        double[][] matrix4 = Util.formMatrix4(new double[]{1, 2, 3, 4, 5});
+        PrinterMatrix.arrayPrint(matrix4);
 
 
     }
