@@ -9,11 +9,10 @@ public class Runner {
         Lock lock = new Lock();
         randomInsert(lock);
         System.out.println(lock);
-
         Breaker breaker = new Breaker();
         int iteration = breaker.hack(lock);
         System.out.println(iteration);
-
+//
         System.out.println(lock);
 
     }
@@ -24,7 +23,8 @@ public class Runner {
         int i = 1;
         while (i < 3) {
             Dice dice = new Dice(1 + random.nextInt(6));
-            int cell = random.nextInt(9);;
+            int cell = random.nextInt(9);
+            ;
             lock.insert(dice, cell);
             i++;
         }
