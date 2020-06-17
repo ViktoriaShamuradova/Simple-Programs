@@ -1,4 +1,4 @@
-package by.epamtc.arrays.newArrayWithoutMinElements;
+package by.epamtc.array.newArrayWithoutMinElements;
 
 public class Util {
 
@@ -31,8 +31,8 @@ public class Util {
 
     private static int countOfElement(int[] array, int element) {
         int count = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == element) {
+        for (int value : array) {
+            if (value == element) {
                 count++;
             }
         }

@@ -1,4 +1,4 @@
-package by.epamtc.arrays.newArrayWithoutMinElements;
+package by.epamtc.array.newArrayWithoutMinElements;
 
 import java.util.Arrays;
 

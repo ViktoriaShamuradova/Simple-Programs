@@ -1,7 +1,7 @@
-package by.epamtc.arraysOfArrays.formMatrix;
+package by.epamtc.arrayOfArray.formMatrix;
 
-import by.epamtc.arraysOfArrays.PrinterMatrix;
-import by.epamtc.arraysOfArrays.mulMatrix.MatrixOperations;
+import by.epamtc.arrayOfArray.PrinterMatrix;
+import by.epamtc.arrayOfArray.mulMatrix.MatrixOperations;
 
 public class Util {
 

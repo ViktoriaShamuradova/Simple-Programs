@@ -1,4 +1,4 @@
-package by.epamtc.arrays.findMaxSum;
+package by.epamtc.array.findMaxSum;
 
 public class Util {
     public static double findMaxSum(double[] array) {

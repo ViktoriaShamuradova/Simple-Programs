@@ -1,4 +1,4 @@
-package by.epamtc.arrays.minOfMostCommonElement;
+package by.epamtc.array.minOfMostCommonElement;
 
 public class Util {
     public static int getMinOfMostCommonElement(int[] array) {

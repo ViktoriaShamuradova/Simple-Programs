@@ -1,6 +1,6 @@
-package by.epamtc.arraysOfArrays.mulMatrix;
+package by.epamtc.arrayOfArray.mulMatrix;
 
-import by.epamtc.arraysOfArrays.PrinterMatrix;
+import by.epamtc.arrayOfArray.PrinterMatrix;
 
 public class Runner {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package by.epamtc.arrays.task3;
+package by.epamtc.array.superLock;
 
 
 import java.util.Objects;

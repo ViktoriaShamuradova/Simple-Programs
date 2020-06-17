@@ -1,4 +1,4 @@
-package by.epamtc.arrays.task3;
+package by.epamtc.array.superLock;
 
 import java.util.Random;
 
@@ -12,7 +12,6 @@ public class Runner {
         Breaker breaker = new Breaker();
         int iteration = breaker.hack(lock);
         System.out.println(iteration);
-//
         System.out.println(lock);
 
     }
@@ -24,10 +23,8 @@ public class Runner {
         while (i < 3) {
             Dice dice = new Dice(1 + random.nextInt(6));
             int cell = random.nextInt(9);
-            ;
             lock.insert(dice, cell);
             i++;
         }
-
     }
 }

@@ -1,4 +1,4 @@
-package by.epamtc.arrays.sumOfMaxAndMinElement;
+package by.epamtc.array.sumOfMaxAndMinElement;
 
 public class Util {
     public static int sumOfMaxAndMinElement(int[] array) {

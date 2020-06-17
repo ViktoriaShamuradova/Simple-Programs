@@ -1,4 +1,4 @@
-package by.epamtc.arraysOfArrays.mulMatrix;
+package by.epamtc.arrayOfArray.mulMatrix;
 
 public class MatrixOperations {
 
