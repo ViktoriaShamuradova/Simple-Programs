@@ -9,6 +9,10 @@ public class Dice {
         this.frontFaceValue = frontFaceValue;
     }
 
+    public void setFrontFaceValue(int frontFaceValue) {
+        this.frontFaceValue = frontFaceValue;
+    }
+
     public int getFrontFaceValue() {
         return frontFaceValue;
     }

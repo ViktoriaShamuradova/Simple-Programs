@@ -1,5 +1,7 @@
 package by.epamtc.arrays.task3;
 
+import java.util.Arrays;
+
 public class Lock {
     private final int[] CELLS = new int[10];
 
@@ -11,9 +13,8 @@ public class Lock {
         if (cell < 0 || cell > 9) throw new RuntimeException();
         CELLS[cell] = dice.getFrontFaceValue();
     }
-
     public boolean isOpen() {
-        for (int i = 0; i < CELLS.length; i++) {
+        for (int i = 0; i < CELLS.length-2; i++) {
             if (CELLS[i] != 0 && CELLS[i + 1] != 0 && CELLS[i + 2] != 0) {
                 if (CELLS[i] + CELLS[i + 1] + CELLS[i + 2] == 10) {
                     return true;
@@ -23,11 +24,24 @@ public class Lock {
         return false;
     }
 
-    public static void main(String[] args) {
-        Lock lock = new Lock();
-        lock.insert(new Dice(5), 1);
-        lock.insert(new Dice(5), 2);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Lock lock = (Lock) o;
+        return Arrays.equals(CELLS, lock.CELLS);
+    }
 
-        System.out.println(lock.isOpen());
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(CELLS);
+    }
+
+
+    @Override
+    public String toString() {
+        return "Lock{" +
+                "CELLS=" + Arrays.toString(CELLS) +
+                '}';
     }
 }
